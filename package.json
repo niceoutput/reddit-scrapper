@@ -1,0 +1,24 @@
+{
+  "name": "reddit-scrapper",
+  "version": "1.0.0",
+  "description": "Reddit comments thread scrapper",
+  "main": "sheet.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niceoutput/reddit-scrapper.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/niceoutput/reddit-scrapper/issues"
+  },
+  "homepage": "https://github.com/niceoutput/reddit-scrapper#readme",
+  "dependencies": {
+    "google-spreadsheet": "^3.0.13",
+    "puppeteer": "^5.3.1"
+  }
+}
