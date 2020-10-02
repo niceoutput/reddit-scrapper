@@ -3,7 +3,7 @@ const { GoogleSpreadsheet } = require("google-spreadsheet");
 module.exports = class Sheet {
   constructor(args) {
     this.doc = new GoogleSpreadsheet(
-      "1t6KH5umJEQ6dqQoOTXdC5bM0vBjnDB2NiJ6Y06o_Yqs"
+      "1pU_htJ5isvcjqynuyMnUhnJ4pkULNgcygiQzlAC6VMU"
     );
   }
   async load() {
@@ -11,6 +11,10 @@ module.exports = class Sheet {
     await this.doc.useServiceAccountAuth(require("./credentials.json"));
     // loads document properties and worksheets
     await this.doc.loadInfo();
+  }
+  async addSheet(title, headerValues) {
+    await this.doc.addSheet({ title, headerValues });
+    return this.doc.sheetsByIndex.length - 1;
   }
   async addRows(rows, i) {
     // or use doc.sheetsById[id]
